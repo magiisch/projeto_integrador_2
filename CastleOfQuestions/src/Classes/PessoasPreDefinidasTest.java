@@ -34,7 +34,7 @@ public class PessoasPreDefinidasTest {
         Pessoa pessoa2 = new Pessoa();
         pessoa2.setNome("Eduarda Gabriele");
         pessoa2.setIdade(22);
-        pessoa2.setCalvo(false);
+        pessoa2.setCalvo(true);
         pessoa2.setCabeloLongo(false);
         pessoa2.setAlto(true);
         pessoa2.setBarba(false);
@@ -48,7 +48,7 @@ public class PessoasPreDefinidasTest {
         Pessoa pessoa3 = new Pessoa();
         pessoa3.setNome("Suzena");
         pessoa3.setIdade(12);
-        pessoa3.setCalvo(true);
+        pessoa3.setCalvo(false);
         pessoa3.setCabeloLongo(false);
         pessoa3.setAlto(false);
         pessoa3.setBarba(false);
@@ -77,7 +77,7 @@ public class PessoasPreDefinidasTest {
         Pessoa pessoa5 = new Pessoa();
         pessoa5.setNome("Rodrigo Jr.");
         pessoa5.setIdade(19);
-        pessoa5.setCalvo(true);
+        pessoa5.setCalvo(false);
         pessoa5.setCabeloLongo(false);
         pessoa5.setAlto(false);
         pessoa5.setBarba(true);
@@ -114,21 +114,21 @@ public class PessoasPreDefinidasTest {
         pessoa7.setCabeloClaro(false);
         pessoa7.setMaior20(true);
         pessoa7.setOlhoEscuro(true);
-        lista_pessoas.add(5,pessoa6); 
+        lista_pessoas.add(6,pessoa7); 
         
         Pessoa pessoa8 = new Pessoa();
         pessoa8.setNome("Lucas Robertoo");
         pessoa8.setIdade(50);
-        pessoa8.setCalvo(false);
-        pessoa8.setCabeloLongo(false);
+        pessoa8.setCalvo(true);
+        pessoa8.setCabeloLongo(true);
         pessoa8.setAlto(true);
-        pessoa8.setBarba(false);
+        pessoa8.setBarba(true);
         pessoa8.setProfessor(true);
-        pessoa8.setMasculino(false);
+        pessoa8.setMasculino(true);
         pessoa8.setCabeloClaro(true);
-        pessoa8.setMaior20(false);
-        pessoa8.setOlhoEscuro(false);
-        lista_pessoas.add(5,pessoa6); 
+        pessoa8.setMaior20(true);
+        pessoa8.setOlhoEscuro(true);
+        lista_pessoas.add(7,pessoa8); 
 
         return lista_pessoas;
         

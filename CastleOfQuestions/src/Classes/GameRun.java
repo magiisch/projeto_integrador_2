@@ -43,19 +43,15 @@ public class GameRun {
         Collections.shuffle(numeros);
         Collections.shuffle(numeros);
         
-        Integer condi=0;
-        
-        // Laco de rep do jogo
+        // Laco de rep do jogo... Ate 9 pq e a quantia de perguntas que temos
         for(int i = 0; i < 9; i++){
             // printa na tela uma pergunta aleatorio gerada pelo numero embaralhado
             System.out.println(lista_perguntaPadrao.get(numeros.get(i)));
             // armazena o numero embaralho em uma variavel para poder usar no switch
             int numPergunta = numeros.get(i);
-            // variavel para capturar a resposta do usuario OBS: so para teste
-            // dps melhoramos
+            // variavel para capturar a resposta do usuario
             //Character resp;
             Integer resp;
-            // isso nem preciso comentar
             Scanner sc = new Scanner(System.in);    
             
             //resp = sc.nextLine().charAt(0);
@@ -71,11 +67,8 @@ public class GameRun {
                 i=10;
                 break;
             }
-            ++condi;
-            if(condi==8){
-                condi=0;
+            if(i==8){
                 i=0;
-                Collections.shuffle(numeros);
                 Collections.shuffle(numeros);
                 Collections.shuffle(numeros);
             }

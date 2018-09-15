@@ -16,12 +16,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCalvo() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             }
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCalvo() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -31,12 +33,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCabeloLongo() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCabeloLongo() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -46,6 +50,7 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isAlto() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             }
                            //
                         }
@@ -53,6 +58,7 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isAlto() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -62,12 +68,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isBarba() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isBarba() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -77,12 +85,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isProfessor() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isProfessor() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -92,12 +102,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isMasculino() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isMasculino() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -107,12 +119,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCabeloClaro()== true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isCabeloClaro() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -122,12 +136,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isOlhoEscuro() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isOlhoEscuro() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
@@ -137,12 +153,14 @@ public class EliminaPessoas {
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isMaior20() == true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         }
                     }else{
                         for (int cont = 0; cont < lista_pessoas.size(); cont++){
                            if(lista_pessoas.get(cont).isMaior20() != true){
                                 lista_pessoas.remove(cont);
+                                cont=cont-1;
                             } 
                         } 
                     }
