@@ -9,5 +9,6 @@ public class App {
         GameRun.start();
         System.out.println("Pora bicho!");
         System.out.println("Pora bicho! faz esse commit desgracado");
+        System.out.println("Pora bicho! faz esse commit desgracado");
     }   
 }
