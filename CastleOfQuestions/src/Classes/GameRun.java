@@ -25,7 +25,10 @@ public class GameRun {
         //lista_pessoas = cadastros.cadastraPessoa();
         
         // armazena as pessoas cadastradas na classe
-        lista_pessoas = pessoas_test.pessoasPreDefinidas();
+        //lista_pessoas = pessoas_test.pessoasPreDefinidas();
+        //ArquivoTxt.salvaTxt("dados_pessoas.txt", pessoas_test.pessoasPreDefinidas());
+        lista_pessoas = ArquivoTxt.capturaTxt("dados_pessoas.txt");
+        
         //lista_pessoasBCKP = lista_pessoas;
         
         // array de numeros para sortear as perguntas

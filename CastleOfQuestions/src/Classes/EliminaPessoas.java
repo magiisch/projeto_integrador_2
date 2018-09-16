@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EliminaPessoas {
-    public static List getPredicaoPessoa(List<Pessoa> lista_pessoas, Integer resp, Integer numPergunta){
+    public static List<Pessoa> getPredicaoPessoa(List<Pessoa> lista_pessoas, Integer resp, Integer numPergunta){
             // switch com cases para cada pergunta do sistema
             // ** Sera entrado no case conforme a pergunta gerada acima
             //    logo em seguida faz as operacoes
