@@ -20,7 +20,10 @@ salvaTxt  -->  recebendo o caminho, ou nome do arquivo que sera salvo.
 
 public class ArquivoTxt {
     
-    public static void salvaTxt(String caminho, List<Pessoa> lista_pessoas){
+    public static void salvaTxt(String caminho, Pessoa pessoa){
+        List<Pessoa> lista_pessoas = new ArrayList<Pessoa>();
+        lista_pessoas = ArquivoTxt.capturaTxt(caminho);
+        lista_pessoas.add(pessoa);
         if(Write(caminho, lista_pessoas))
             System.out.println("Arquivo salvo com sucesso!");
         else

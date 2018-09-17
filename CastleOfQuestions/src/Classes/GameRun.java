@@ -26,7 +26,25 @@ public class GameRun {
         
         // armazena as pessoas cadastradas na classe
         //lista_pessoas = pessoas_test.pessoasPreDefinidas();
-        //ArquivoTxt.salvaTxt("dados_pessoas.txt", pessoas_test.pessoasPreDefinidas());
+        
+        /*   Obejto pessoa para testar a metodo salvaTxt()
+        Pessoa pessoa_test = new Pessoa();
+        pessoa_test.setNome("Pessoa Test");
+        pessoa_test.setIdade(19);
+        pessoa_test.setCalvo(true);
+        pessoa_test.setCabeloLongo(false);
+        pessoa_test.setAlto(false);
+        pessoa_test.setBarba(true);
+        pessoa_test.setProfessor(true);
+        pessoa_test.setMasculino(false);
+        pessoa_test.setCabeloClaro(true);
+        pessoa_test.setMaior20(true);
+        pessoa_test.setOlhoEscuro(false);
+
+        ArquivoTxt.salvaTxt("dados_pessoas.txt", pessoa_test);
+        Exemplo de como salvar uma pessoa no txt
+        */
+        
         lista_pessoas = ArquivoTxt.capturaTxt("dados_pessoas.txt");
         
         //lista_pessoasBCKP = lista_pessoas;
