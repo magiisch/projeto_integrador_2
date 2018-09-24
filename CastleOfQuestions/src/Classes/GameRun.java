@@ -65,23 +65,34 @@ public class GameRun {
         Collections.shuffle(numeros);
         
         // Laco de rep do jogo... Ate 9 pq e a quantia de perguntas que temos
+        int temCabelo = 0;     //    0=pergunta sobre calvo nao foi feita          1 =  Sim       2 = Nao
         for(int i = 0; i < 9; i++){
-            // printa na tela uma pergunta aleatorio gerada pelo numero embaralhado
-            System.out.println(lista_perguntaPadrao.get(numeros.get(i)));
-            // armazena o numero embaralho em uma variavel para poder usar no switch
             int numPergunta = numeros.get(i);
-            // variavel para capturar a resposta do usuario
-            //Character resp;
-            Integer resp;
-            Scanner sc = new Scanner(System.in);    
             
-            //resp = sc.nextLine().charAt(0);
-            resp = sc.nextInt();
-            
-            //Classe contendo um metodo static, para realizar a pesquisa 
-            //conforme respostas do usuario, e ir removendo as pessoas
-            //da lista de predicao
-            lista_pessoas=EliminaPessoas.getPredicaoPessoa(lista_pessoas, resp, numPergunta);
+            if(!((temCabelo==0 || temCabelo==2) && (numPergunta == 1 || numPergunta== 6))){
+               // printa na tela uma pergunta aleatorio gerada pelo numero embaralhado
+                System.out.println(lista_perguntaPadrao.get(numPergunta));
+                // armazena o numero embaralho em uma variavel para poder usar no switch
+                // variavel para capturar a resposta do usuario
+                //Character resp;
+                Integer resp;
+                Scanner sc = new Scanner(System.in);    
+
+                //resp = sc.nextLine().charAt(0);
+                resp = sc.nextInt();
+
+                //Classe contendo um metodo static, para realizar a pesquisa 
+                //conforme respostas do usuario, e ir removendo as pessoas
+                //da lista de predicao
+                lista_pessoas=EliminaPessoas.getPredicaoPessoa(lista_pessoas, resp, numPergunta);
+                
+                if(numPergunta==0 && resp==0){
+                    temCabelo=1;
+                }
+                if(numPergunta==0 && resp==1){
+                    temCabelo=2;
+                }
+            }
             
             if(lista_pessoas.size()==1){
                 System.out.println("A pessoa escolhida foi: "+lista_pessoas.get(0).getNome());
