@@ -56,6 +56,9 @@ public class GameRun {
         ListaPerguntas lista = new ListaPerguntas();
         lista_perguntaPadrao=lista.retornaLista();
         
+        //ArquivoTxt.excluirTxt("dados_pessoas.txt", 2);  EXCLUIU A PESSOA COM CODIGO 2
+        //CadastraPessoa.cadastraPessoa(lista_pessoas);
+        
         
          //armazena de um a 6  OBS: e o numero de perguntas atualmente
         for(int i = 0; i < 9; i++)

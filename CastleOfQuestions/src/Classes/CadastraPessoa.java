@@ -16,19 +16,21 @@ import java.util.Scanner;
 public class CadastraPessoa {
     
     
-    public List cadastraPessoa(){
-        List<Pessoa> lista_pessoas = new ArrayList<Pessoa>();   
-        for (int i = 0; i < 6; i++){
+    public static void cadastraPessoa(List<Pessoa> lista_pessoas){ 
+      
             Pessoa pessoa = new Pessoa();
             Scanner sc = new Scanner(System.in);
-            System.out.printf("Informe seu nome");
+            System.out.printf("CADASTRAR PESSOA\n\n");
+            System.out.printf("Informe o nome");
             pessoa.setNome(sc.nextLine());
             
-            System.out.printf("Informe sua idade");
+            pessoa.setCodPessoa((lista_pessoas.get(lista_pessoas.size()-1).getCodPessoa()+1));
+            
+            System.out.printf("Informe a idade");
             pessoa.setIdade(sc.nextInt());
             
             Integer resp;
-            System.out.printf("A pessoa que você esta pensando e calva? ");
+            System.out.printf("A pessoa e calva? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setCalvo(true);
@@ -37,7 +39,7 @@ public class CadastraPessoa {
             }
             System.out.println("");
             
-            System.out.printf("A pessoa que você esta pensando tem cabelos longos? ");
+            System.out.printf("A pessoa tem cabelos longos? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setCabeloLongo(true);
@@ -46,7 +48,7 @@ public class CadastraPessoa {
             }
             System.out.println("");
             
-            System.out.printf("A pessoa que você esta pensando é alta? ");
+            System.out.printf("A pessoa e alta? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setAlto(true);
@@ -55,7 +57,7 @@ public class CadastraPessoa {
             }
             System.out.println("");
             
-            System.out.printf("A pessoa que você esta pensando tem barba? ");
+            System.out.printf("A pessoa tem barba? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setBarba(true);
@@ -64,7 +66,7 @@ public class CadastraPessoa {
             }
             System.out.println("");
             
-            System.out.printf("A pessoa que você esta pensando e professor? ");
+            System.out.printf("A pessoa e professor? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setProfessor(true);
@@ -73,7 +75,7 @@ public class CadastraPessoa {
             }
             System.out.println("");
             
-            System.out.printf("A pessoa que voce esta pensando e do sexo masculino? ");
+            System.out.printf("A pessoa e do sexo masculino? ");
             resp = sc.nextInt();
             if(resp==1){
                 pessoa.setMasculino(true);
@@ -81,11 +83,8 @@ public class CadastraPessoa {
                 pessoa.setMasculino(false);
             }
             System.out.println("");
-            
-            lista_pessoas.add(i,pessoa);  
-        }
         
-        return lista_pessoas;
+        ArquivoTxt.salvaTxt("dados_pessoas.txt", pessoa);
     }
     
 }

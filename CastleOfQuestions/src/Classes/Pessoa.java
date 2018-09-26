@@ -2,6 +2,7 @@ package Classes;
 
 public class Pessoa {
 	private String texto;
+        private Integer codPessoa;
 	private String nome;
 	private Integer idade;
 	private boolean calvo;  //  A pessoa que você esta pensando é calvo?
@@ -13,16 +14,19 @@ public class Pessoa {
         private boolean cabeloClaro;
         private boolean olhoEscuro;
         private boolean maior20;
+        
     
 	
-	/*public void salvaTxt() {
-		//this.idade = Integer.toString(this.idadeI);	
-		this.texto =  this.getNome() + ";" + this.getIdade() + ";" + this.isAlto() + ";" + this.isBarba() + ";" + this.isCalvo() + ";";
-		if (Arquivo.Write("teste.txt", this.texto))
-			System.out.println("Arquivo salvo");
-	}*/
+	
 
-    /**
+    public Integer getCodPessoa(){
+        return this.codPessoa;
+    }
+    
+    public void setCodPessoa(Integer codPessoa){
+        this.codPessoa=codPessoa;
+    }
+        /**
      * @return the nome
      */
     public String getNome() {

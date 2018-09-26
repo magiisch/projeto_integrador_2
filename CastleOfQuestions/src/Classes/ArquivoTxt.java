@@ -20,6 +20,26 @@ salvaTxt  -->  recebendo o caminho, ou nome do arquivo que sera salvo.
 
 public class ArquivoTxt {
     
+    public static void excluirTxt(String caminho, Integer codPessoa){
+        List<Pessoa> lista_pessoas = new ArrayList<Pessoa>();
+        lista_pessoas=capturaTxt(caminho);
+        boolean falha_salvar=true;
+        for(int i=0; i<lista_pessoas.size();i++){
+            if(lista_pessoas.get(i).getCodPessoa()==codPessoa){
+                lista_pessoas.remove(i);
+                if(Write(caminho, lista_pessoas))
+                    System.out.println("Arquivo salvo com sucesso!");
+                else
+                    System.out.println("Erro ao salvar o arquivo!");
+                falha_salvar=false;
+                break;
+            }
+        }
+        if(falha_salvar){
+            System.out.println("Tentativa de exclusao invalida!!\n");
+        }
+    }
+    
     public static void salvaTxt(String caminho, Pessoa pessoa){
         List<Pessoa> lista_pessoas = new ArrayList<Pessoa>();
         lista_pessoas = ArquivoTxt.capturaTxt(caminho);
@@ -30,6 +50,9 @@ public class ArquivoTxt {
             System.out.println("Erro ao salvar o arquivo!");
     }
     
+    
+    // Busca a String conteudo (que contem todas as informacoes das pessoas cadastradas) no metodo "read" e, logo em seguida, 
+    // processa o conteudo da string ja armazendando nos objetos "Pessoa", ao final do processamento a funcao retorna um List<Pessoa>
     public static List<Pessoa> capturaTxt(String caminho){
         String conteudo = read(caminho);
         List<Pessoa> lista_pessoas = new ArrayList<Pessoa>();
@@ -39,6 +62,8 @@ public class ArquivoTxt {
             Pessoa pessoa = new Pessoa();
             try{  
                 pessoa.setNome(conteudo.split(";")[i]);
+                i+=1;
+                pessoa.setCodPessoa(Integer.parseInt(conteudo.split(";")[i]));
                 i+=1;
                 pessoa.setIdade(Integer.parseInt(conteudo.split(";")[i]));
                 i+=1;
@@ -71,6 +96,8 @@ public class ArquivoTxt {
         return lista_pessoas;
     }
     
+    
+    // Le todo o conteudo do txt e armazena  na String conteudo. A String "conteudo" será tratada no metodo capturaTxt 
     private static String read(String caminho){
         String conteudo = "";
         
@@ -96,6 +123,7 @@ public class ArquivoTxt {
         }
     }
     
+    // Salva uma lista de pessoas em txt
     private static boolean Write(String caminho, List<Pessoa> lista_pessoas){
         try{
             FileWriter arq = new FileWriter(caminho);
@@ -103,6 +131,7 @@ public class ArquivoTxt {
             //gravarArq.println(texto);
             for(int i=0; i<lista_pessoas.size();i++){
                 gravarArq.println(lista_pessoas.get(i).getNome()+";");
+                gravarArq.println(lista_pessoas.get(i).getCodPessoa()+";");
                 gravarArq.println(lista_pessoas.get(i).getIdade()+";");
                 gravarArq.println(lista_pessoas.get(i).isCalvo()+";");
                 gravarArq.println(lista_pessoas.get(i).isCabeloLongo()+";");
