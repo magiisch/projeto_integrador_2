@@ -20,7 +20,7 @@ public class GameRun {
         // Classe para o cadastro de novas pessoas no sistema
         CadastraPessoa cadastros = new CadastraPessoa();
         //Classe para setar algumas pessoas e seus dados par afins de testes
-        PessoasPreDefinidasTest pessoas_test = new PessoasPreDefinidasTest();
+ 
         
         //lista_pessoas = cadastros.cadastraPessoa();
         
@@ -57,7 +57,9 @@ public class GameRun {
         lista_perguntaPadrao=lista.retornaLista();
         
         //ArquivoTxt.excluirTxt("dados_pessoas.txt", 2);  EXCLUIU A PESSOA COM CODIGO 2
-        //CadastraPessoa.cadastraPessoa(lista_pessoas);
+       // for(int i=0; i<10; i++){
+            //lista_pessoas = CadastraPessoa.cadastraPessoa(lista_pessoas);
+        //}
         
         
          //armazena de um a 6  OBS: e o numero de perguntas atualmente

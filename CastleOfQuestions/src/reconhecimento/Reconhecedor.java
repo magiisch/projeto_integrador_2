@@ -54,7 +54,7 @@ public class Reconhecedor {
         
         //CanvasFrame.getDefaultGamma() / camera.getGamma()
         
-        CanvasFrame cFrame = new CanvasFrame("Preview", 1);
+        CanvasFrame cFrame = new CanvasFrame("Reconhecedor", 1);
         Frame frameCapturado = null;
         Mat imagemColorida = new Mat();
         int numeroAmostras = 26;
@@ -110,13 +110,13 @@ public class Reconhecedor {
                     break;
                 }*/
                 
-                if (decisao > 5000) {
-                    this.nome = "Desconhecido";
-                    this.chave = false;
+                if (decisao > 3000) {
+                    this.nome = "Desconhecido... - "+confianca.get(0);
+                    ///this.chave = false;
                 } else {
                     //this.nome = pessoas[predicao] + " - " + confianca.get(0);
                     this.nome = "Reconhecendo... - "+confianca.get(0);
-                    this.chave = true;
+                    //this.chave = true;
                     //break;
                 }
                 

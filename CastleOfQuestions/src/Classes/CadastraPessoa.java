@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class CadastraPessoa {
     
     
-    public static void cadastraPessoa(List<Pessoa> lista_pessoas){ 
+    public static List<Pessoa> cadastraPessoa(List<Pessoa> lista_pessoas){ 
       
             Pessoa pessoa = new Pessoa();
             Scanner sc = new Scanner(System.in);
@@ -28,6 +28,12 @@ public class CadastraPessoa {
             
             System.out.printf("Informe a idade");
             pessoa.setIdade(sc.nextInt());
+            
+            if(pessoa.getIdade()>20){
+                pessoa.setMaior20(true);
+            }else{
+                pessoa.setMaior20(false);
+            }
             
             Integer resp;
             System.out.printf("A pessoa e calva? ");
@@ -83,8 +89,28 @@ public class CadastraPessoa {
                 pessoa.setMasculino(false);
             }
             System.out.println("");
+            
+            System.out.printf("A pessoa tem cabelo claro? ");
+            resp = sc.nextInt();
+            if(resp==1){
+                pessoa.setCabeloClaro(true);
+            }else{
+                pessoa.setCabeloClaro(false);
+            }
+            System.out.println("");
+            
+            System.out.printf("A pessoa tem olho escuro? ");
+            resp = sc.nextInt();
+            if(resp==1){
+                pessoa.setOlhoEscuro(true);
+            }else{
+                pessoa.setOlhoEscuro(false);
+            }
+            System.out.println("");
         
         ArquivoTxt.salvaTxt("dados_pessoas.txt", pessoa);
+        lista_pessoas.add(pessoa);
+        return lista_pessoas;
     }
     
 }

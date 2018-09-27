@@ -49,7 +49,7 @@ public class CapturaImagens {
         // nosso caso é a web cam... se tivesse duas camera no pc teria a 0 e 1 
         OpenCVFrameGrabber camera = new OpenCVFrameGrabber(0);
         
-        String[] pessoas = {"", "Mateus", "Eduarda"};
+        String[] pessoas = {"", "Mateus", "Mateus"};
         
         // inicia a captura das imagens pela web cam      
         camera.start();
@@ -82,7 +82,7 @@ public class CapturaImagens {
         Mat imagemColorida = new Mat();
         
         // Variavel limite de amostras, no nosso caso as fotos
-        int numeroAmostras = 50;
+        int numeroAmostras = 10;
         // Variavel para contar ate o maximo de amostrar
         int amostra = 1;
         
@@ -92,6 +92,7 @@ public class CapturaImagens {
         Scanner cadastro = new Scanner(System.in);
         // variavel para armazenar o ID da pessoa
         int idPessoa = cadastro.nextInt();
+        //amostra=40;
        
         // Joga o que esta sendo capturado pela webcam no frameCapturado e 
         // enquanto estiver capturando com a webcam ele executa o while
@@ -120,6 +121,7 @@ public class CapturaImagens {
             if (tecla == null){
                 tecla = cFrame.waitKey(5);
             }
+            
             for (int i=0; i < facesDetectadas.size(); i++){
                 Rect dadosFace = facesDetectadas.get(0);
                 rectangle(imagemColorida, dadosFace, new Scalar(0,0,255, 0));
